@@ -20,6 +20,5 @@ public class TodoDTO {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.done = entity.isDone();
-
     }
 }
