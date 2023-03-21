@@ -21,15 +21,16 @@ public class TestController {
         return "Hello World ID "+id;
     }
     @GetMapping("/testRequestParam")
-    //http://localhost:8080/test/testRequestParam?id=12345
     public String testControllerRequestParam(@RequestParam(required = false) int id){
+
         return "Hello World ID "+ id;
     }
+    //http://localhost:8080/test/testRequestParam?id=12345
     @GetMapping("/testRequestBody")
     public String testControllerRequestBody(@RequestBody TestRequestBodyDTO TestRequestBodyDTO) {
         return "Hello World ID" + TestRequestBodyDTO.getId()+ "Message : " + TestRequestBodyDTO.getMessage();
     }
-    @GetMapping("/testRequestParam")
+    @GetMapping("/testRequestParam1")
     public ResponseDTO<String> testControllerResponseBody(){
         List<String> list = new ArrayList<>();
         list.add("Hello World! I'm ResponseDTO");
