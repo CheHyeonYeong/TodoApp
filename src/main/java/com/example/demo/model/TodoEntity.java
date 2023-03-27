@@ -3,12 +3,10 @@ package com.example.demo.model;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 @Builder
 @NoArgsConstructor
@@ -24,5 +22,4 @@ public class TodoEntity {
     private String userId;
     private String title;
     private boolean done;
-
 }

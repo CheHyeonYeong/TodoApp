@@ -9,7 +9,6 @@ import java.util.List;
 @Repository
 public interface TodoRepository extends JpaRepository <TodoEntity, String> {
 
-    List<TodoEntity> findByUserID(String userID);
-
+    List<TodoEntity> findByUserId(String userId);
 
 }

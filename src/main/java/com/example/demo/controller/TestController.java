@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ResponseDTO;
-import com.example.demo.dto.TestRequestBodyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,10 +25,10 @@ public class TestController {
         return "Hello World ID "+ id;
     }
     //http://localhost:8080/test/testRequestParam?id=12345
-    @GetMapping("/testRequestBody")
-    public String testControllerRequestBody(@RequestBody TestRequestBodyDTO TestRequestBodyDTO) {
-        return "Hello World ID" + TestRequestBodyDTO.getId()+ "Message : " + TestRequestBodyDTO.getMessage();
-    }
+   // @GetMapping("/testRequestBody")
+    //public String testControllerRequestBody(@RequestBody TestRequestBodyDTO TestRequestBodyDTO) {
+      //  return "Hello World ID" + TestRequestBodyDTO.getId()+ "Message : " + TestRequestBodyDTO.getMessage();
+    //}
     @GetMapping("/testRequestParam1")
     public ResponseDTO<String> testControllerResponseBody(){
         List<String> list = new ArrayList<>();
