@@ -91,6 +91,7 @@ public class ToDoController {
             List<TodoEntity> entities = service.delete(entity);
             List<TodoDTO> dtos = entities.stream().map(TodoDTO::new).collect(Collectors.toList());
             ResponseDTO<TodoDTO> response = ResponseDTO.<TodoDTO>builder().data(dtos).build();
+            //log 출력해보기(하고 싶음)
             return ResponseEntity.ok().body(response);
         }
         catch (Exception e){
